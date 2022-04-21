@@ -29,6 +29,8 @@ function App() {
     })
       .then(response => response.json())
       .then(data => {
+        const newUsers = [...users, data]
+        setUsers(newUsers)
         console.log('Success:', data);
       })
   }
